@@ -13,58 +13,67 @@
 <body>
 <?php
     // <!-- funcs.phpの読み込み -->
-        require_once("funcs.php");
+    require_once("funcs.php");
 
     
     // POSTで取得した値を変数に転換
     session_start();
     $_SESSION['model_num'] = $_POST['model_num'];
-    $_SESSION['category'] = $_POST['category'];
-    $_SESSION['productName'] = $_POST['product_name'];
-    $_SESSION['total_amount'] = $_POST['total_amount'];
-    $_SESSION['shop_amount'] = $_POST['shop_amount'];
-    $_SESSION['warehouse_amount'] = $_POST['warehouse_amount'];
-    $_SESSION['waiting_amount'] = $_POST['waiting_amount'];
-    $_SESSION['threshold'] = $_POST['threshold'];
+    $model_num = $_SESSION['model_num'];
+
+    // データ読み込み
+    $pdo = dbconn();
+    
+
+    //２．データ取得SQL作成
+    $stmt_0x = $pdo->prepare("SELECT * FROM total_db WHERE model_num='$model_num'");
+    $status_0x = $stmt_0x->execute();
+
+    //３．データ表示
+    $after = "";
+    if ($status_0x == false) {
+        //execute（SQL実行時にエラーがある場合）
+        $error_0x = $stmt_0x->errorInfo();
+        exit('ErrorQuery:' . print_r($error_0x, true));
+    }else{
+        //Selectデータの数だけ自動でループしてくれる
+        //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
+        while( $result = $stmt_0x->fetch(PDO::FETCH_ASSOC)){
+            $after .= 
+            "
+            <tr>
+                <td>$result[category]</td>
+                <td>$result[model_num]</td>
+                <td>$result[product_name]</td>
+                <td>$result[total_amount]</td>
+                <td>$result[shop_amount]</td>
+                <td>$result[warehouse_amount]</td>
+                <td>$result[waiting_amount]</td>
+                <td>$result[threshold]</td>
+            </tr>";
+    }
+
+  }
 
     
 ?>
 <!-- // 表形式で数値を記入 -->
-<h1>確認画面</h1>    
-<div class="table-wrapper">
-    <table class="sub-table">
+<h1>以下の商品情報を削除しますか？</h1>
+<table class="result-table">
         <tr>
-            <td class="table-left">商品番号</td>
-            <td><?=$_SESSION['model_num']?></td>
+            <th>カテゴリー</th>
+            <th>商品ID</th>
+            <th>商品名</th>
+            <th>在庫総数</th>
+            <th>店舗内在庫</th>
+            <th>倉庫内在庫</th>
+            <th>納品待ち</th>
+            <th>発注しきい値</th>
         </tr>
-        <tr>
-            <td class="table-left">商品名</td>
-            <td><?=$_SESSION['productName']?></td>
-        </tr>
-        <tr>
-            <td class="table-left">在庫総数</td>
-            <td><?=$_SESSION['total_amount']?></td>
-        </tr>
-        <tr>
-            <td class="table-left">店舗内在庫</td>
-            <td><?=$_SESSION['shop_amount']?></td>
-        </tr>
-        <tr>
-            <td class="table-left">倉庫内在庫</td>
-            <td><?=$_SESSION['warehouse_amount']?></td>
-        </tr>
-        <tr>
-            <td class="table-left">納品待ち</td>
-            <td><?=$_SESSION['waiting_amount']?></td>
-        </tr>
-        <tr>
-            <td class="table-left">発注しきい値</td>
-            <td><?=$_SESSION['threshold']?></td>
-        </tr>
+        <?=$after?>
     </table>
-</div>
 <div class="btn-wrapper">
-    <button onclick="location.href='07-5. renew insert.php'">送信</button>
+    <button onclick="location.href='09-4. delete exe.php'">削除</button>
 </div>
 <div class="btn-wrapper">
     <button class="btn backBtn" onclick="location.href='javascript:history.back()'">前のページへ戻る</button><br>

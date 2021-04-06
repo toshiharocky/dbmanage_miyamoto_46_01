@@ -17,7 +17,7 @@
     // <!-- funcs.phpの読み込み -->
         require_once("funcs.php");
 
-    //1.  DB接続します
+     //1.  DB接続します
     try {
         //Password:MAMP='root',XAMPP=''
         $pdo = new PDO('mysql:dbname=inventory_management;charset=utf8;host=localhost','root','root');

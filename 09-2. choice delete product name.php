@@ -57,7 +57,7 @@
 
 <h1>商品情報更新</h1>
 <h2>情報を更新する商品を選択してください</h2>
-<form action="07-3. renew product info.php" method="post">
+<form action="09-3. delete confirm.php" method="post">
     <table class="table">
         <tr>
             <th>商品ID</th>
