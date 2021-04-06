@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%; /* 16px(HTML標準)の65%*/
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 0 50px;
+  font-weight: 700;
+}
+
+#pTitle{
+  font-size: 6rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 20px auto 0;
+    font-size: 3.6vw;
+}
+
+.result-wrapper{
+    margin: 20px auto 0;
+    display:flex;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px auto 0;
+    font-size: 2.4rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    display: none;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.link{
+    font-size: 1.6rem;
+}
+
+.table {
+    margin: 20px auto 0 ;
+}
+
+.sub-table{
+    width:60%;
+    margin: 20px auto 0;
+    font-size: 1.6rem;
+}
+
+.result-table{
+    width:80%;
+    margin: 20px auto 0;
+    font-size: 1.4rem;
+}
+
+.table-left{
+    text-align: center;
+    background-color: #17408B;
+    color: #fff;
+}
+
+.table-wrapper{
+    margin: 20px auto 0;
+    width: 70%;
+}
+
+th{
+    padding: 10px 5px;
+    border: 1px #000000 solid;
+    text-align: center;
+    background-color: #17408B;
+    color: #fff;
+}
+td{
+    width: 13%;
+    height: 10px;
+    padding: 10px 5px;
+    border: 1px #000000 solid;
+    color: #000000;
+    text-align: center;
+}
+
+.btn {
+    width: 350px;
+    font-size: 2rem;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 5px;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+.btn-wrapper{
+    margin-top: 20px;
+    text-align: center;   
+}
+
+.topBtn{
+    background-color: rgb(194, 227, 243);
+}
+
+.backBtn{
+    background-color: rgb(251, 242, 239);
+}
+
+.choice-wrapper{
+    width: 30%;
+    border: 1px solid black;
+    padding: 10px 0 30px;
+    margin: 20px auto 0;
+}
+
+.options{
+    text-align:center;
+}
+
+.register{
+    text-align: center;
+    width: 35%;
+    border: 1px solid black;
+    padding: 10px 10px 30px;
+    margin: 20px auto 0;
+}
+
+.register_table{
+    border:none;
+    text-align-last: left;
+    font-size: 1.6rem;
+}
+
+.register_input{
+    width: 90%;
+    font-size: 1.6rem;
+}
+
+.input-wrapper{
+    text-align: center;
+    width: 35%;
+    border: none;
+    padding: 10px 10px 30px;
+    margin: 20px auto 0;
+}
