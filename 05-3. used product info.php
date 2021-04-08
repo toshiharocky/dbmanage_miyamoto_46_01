@@ -155,7 +155,7 @@
     </form>
 </div>
 <div class="btn-wrapper">
-    <button class="btn topBtn" onclick="location.href='01. top page.html'">トップページへ戻る</button>
+    <button class="btn topBtn" onclick="location.href='index.html'">トップページへ戻る</button>
 </div>
 
 

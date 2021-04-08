@@ -80,7 +80,7 @@
         <?=$after?>
     </table>
 <div class="btn-wrapper">
-    <a href="01. top page.html" class="link">トップページへ戻る</a>
+    <a href="index.html" class="link">トップページへ戻る</a>
 </div>
 
 </body>

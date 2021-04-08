@@ -12,7 +12,7 @@
 
 <h1>登録が完了しました。</h1>
 <a href="05-1. choice used product category.php">入力画面へ戻る</a>
-<a href="01. top page.html">トップページへ戻る</a>
+<a href="index.html">トップページへ戻る</a>
 
 
 <?php

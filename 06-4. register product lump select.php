@@ -22,6 +22,9 @@
   </ul>
   <input type="submit" value="送信" id="submit">
 </form>
+    <div class="btn-wrapper">
+        <button class="btn topBtn" onclick="location.href='index.html'">トップページへ戻る</button>
+    </div>
 <script>
 window.addEventListener('DOMContentLoaded', function() {
 // 指定されると動くメッソド

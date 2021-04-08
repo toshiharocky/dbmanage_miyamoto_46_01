@@ -60,7 +60,7 @@
 </div>
 <div class="btn-wrapper">
     <button class="btn backBtn" onclick="location.href='javascript:history.back()'">前のページへ戻る</button><br>
-    <button class="btn topBtn" onclick="location.href='01. top page.html'">トップページへ戻る</button>
+    <button class="btn topBtn" onclick="location.href='index.html'">トップページへ戻る</button>
 </div>
 
     
