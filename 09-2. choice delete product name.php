@@ -55,8 +55,8 @@
 // }
 ?>
 
-<h1>商品情報更新</h1>
-<h2>情報を更新する商品を選択してください</h2>
+<h1>商品削除</h1>
+<h2>削除する商品を選択してください</h2>
 <form action="09-3. delete confirm.php" method="post">
     <table class="table">
         <tr>

@@ -40,6 +40,25 @@ if($status==false){
   //SQL実行時にエラーがある場合（エラーオブジェクト取得して表示）
   $error = $stmt->errorInfo();
   exit("ErrorMessage:". print_r($error, true));
+}
+
+// テーブル「product_num_master」から削除
+// 1. SQL文を用意
+$stmt = $pdo->prepare(
+    "DELETE FROM product_num_master 
+        WHERE model_num=:model_num"
+    );
+
+//  2. バインド変数を用意
+$stmt->bindValue(':model_num', $model_num, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INTR)
+//  3. 実行
+$status = $stmt->execute();
+
+//４．データ登録処理後
+if($status==false){
+  //SQL実行時にエラーがある場合（エラーオブジェクト取得して表示）
+  $error = $stmt->errorInfo();
+  exit("ErrorMessage:". print_r($error, true));
 }else{
   //完了画面へリダイレクト
   redirect("00-2. after deletion.php");

@@ -18,6 +18,12 @@
     
     // POSTで取得した値を変数に転換
     session_start();
+    $_SESSION['id'] = $_POST['id'];
+    $_SESSION['model_num'] = $_POST['model_num'];
+    $_SESSION['product_name'] = $_POST['product_name'];
+    $_SESSION['order_amount'] = $_POST['order_amount'];
+    $_SESSION['order_person'] = $_POST['order_person'];
+    $_SESSION['indate'] = $_POST['indate'];
     $_SESSION['order'] = $_POST['order'];
     $_SESSION['order_person'] = $_POST['order_person'];
     

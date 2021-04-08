@@ -50,8 +50,8 @@
             <td><input type='hidden' name='model_num' value='$result[model_num]'>$result[model_num]</td>
             <td><input type='hidden' name='product_name' value='$result[product_name]'>$result[product_name]</td>
             <td><input type='hidden' name='order_amount' value='$result[order_amount]'>$result[order_amount]</td>
-            <td>$result[order_person]</td>
-            <td>$result[indate]</td>
+            <td><input type='hidden' name='order_person' value='$result[order_person]'>$result[order_person]</td>
+            <td><input type='hidden' name='indate' value='$result[indate]'>$result[indate]</td>
             </tr>";
         }
 

@@ -47,9 +47,9 @@ $stmt = $pdo->prepare("INSERT
     );
 
 //  2. バインド変数を用意
-$stmt->bindValue(':model_num', $model_num, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':category', $category, PDO::PARAM_STR); //****************);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':product_name', $productName, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':model_num', $model_num, PDO::PARAM_STR);
+$stmt->bindValue(':category', $category, PDO::PARAM_STR);
+$stmt->bindValue(':product_name', $productName, PDO::PARAM_STR);
 
 //  3. 実行
 $status = $stmt->execute();

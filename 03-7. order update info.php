@@ -16,13 +16,10 @@
         require_once("funcs.php");
 // 変数の受け取り
     session_start();    
-    $_SESSION['id'] =$_POST['id'];
-    $_SESSION['model_num'] =$_POST['model_num'];
-    $_SESSION['product_name'] =$_POST['product_name'];
-    $_SESSION['order_amount'] =$_POST['order_amount'];
-    
-    $id = $_SESSION['id'];
-// 商品名が表示されると、登録されている「商品番号」「在庫総数」「店舗内在庫」「倉庫内在庫」「納品待ち」「発注しきい値」が表示される
+    $id = $_POST['id'];
+    $order_amount = $_POST['order_amount'];
+    $model_num = $_POST['model_num'];
+
     //1.  DB接続します
     try {
         //Password:MAMP='root',XAMPP=''
@@ -48,12 +45,23 @@
         while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
             $table .= 
             "<tr>
-            <td>$result[model_num]</td>
-            <td>$result[product_name]</td>
-            <td>$result[order_amount]</td>
-            <td>$result[order_person]</td>
-            <td>$result[indate]</td>
-            </tr>";
+            <td><input type='hidden' name='id' value='$result[id]'>$result[id]</td>
+            <td><input type='hidden' name='model_num' value='$result[model_num]'>$result[model_num]</td>
+            <td><input type='hidden' name='product_name' value='$result[product_name]'>$result[product_name]</td>
+            <td><input type='hidden' name='order_amount' value='$result[order_amount]'>$result[order_amount]</td>
+            <td><input type='hidden' name='order_person' value='$result[order_person]'>$result[order_person]</td>
+            <td><input type='hidden' name='indate' value='$result[indate]'>$result[indate]</td>
+            </tr>
+            ";
+
+            $hidden .= "
+            <input type='hidden' name='id' value='$result[id]'>
+            <input type='hidden' name='model_num' value='$result[model_num]'>
+            <input type='hidden' name='product_name' value='$result[product_name]'>
+            <input type='hidden' name='order_amount' value='$result[order_amount]'>
+            <input type='hidden' name='order_person' value='$result[order_person]'>
+            <input type='hidden' name='indate' value='$result[indate]'>
+            ";
         }
 
     }
@@ -67,6 +75,7 @@
                 <h2>商品情報修正</h2>
                     <table class="table">
                         <tr>
+                            <th>発注ID</th>
                             <th>商品ID</th>
                             <th>商品名</th>
                             <th>発注個数</th>
@@ -81,9 +90,9 @@
                     <input type="submit" value="確認" id="submit">
             </fieldset>
 </form>
-<form action="03-10. order delete confirm.php">
+<form action="03-10. order delete confirm.php" method="post">
     <div class="btn-wrapper">
-        <input type="hidden" name="id" value=<?=$id?>>
+        <?=$hidden?>
         <input type="submit" value="発注内容の削除" class="btn">
     </div>
 </form>
