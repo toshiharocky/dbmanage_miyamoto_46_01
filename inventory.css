@@ -18,6 +18,48 @@ body {
   margin-top: 30px;
 }
 
+.top-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.top-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    border: 1px solid black;
+    margin: 20px 5px 0;
+    padding: 30px 0;
+}
+
+.choice-wrapper {
+    width: 30%;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 10px 0 30px;
+}
+
+.options{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tp {
+    width: 100%;
+    font-size: 2rem;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 0 auto;
+    text-align: center;
+    padding: 5px 0;
+}
 
 h1 {
     text-align: center;
@@ -126,16 +168,7 @@ td{
     background-color: rgb(251, 242, 239);
 }
 
-.choice-wrapper{
-    width: 30%;
-    border: 1px solid black;
-    padding: 10px 0 30px;
-    margin: 20px auto 0;
-}
 
-.options{
-    text-align:center;
-}
 
 .register{
     text-align: center;

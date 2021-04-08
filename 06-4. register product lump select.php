@@ -13,6 +13,7 @@
 <body>
 <div class="register">
   <h1>商品一括登録</h1>
+  <h2>"CSV"フォルダから選択してください</h2>
   <form action="06-5. register product lump confirm.php" method="post">
   <div class="btn-wrapper">
     <input id="file" name="file" type="file" />

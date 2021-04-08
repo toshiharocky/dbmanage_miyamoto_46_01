@@ -90,7 +90,7 @@
 </div>
 
 <div class="btn-wrapper">
-    <button class="btn regBtn" onclick="location.href='06-6. register product lump exe.php'">商品を登録</button>
+    <button class="btn regBtn" onclick="location.href='06-6. register product lump exe.php'" class="btn regBtn">商品を登録</button>
 </div>
 <div class="btn-wrapper">
     <button class="btn topBtn" onclick="location.href='index.html'">トップページへ戻る</button>
