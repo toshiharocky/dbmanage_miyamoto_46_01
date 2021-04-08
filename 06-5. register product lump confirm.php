@@ -63,32 +63,34 @@
 
 ?>
 
-
-<table>
-    <tr>
-        <th class="table_left">商品ID</th>
-        <th class="table_left">商品名</th>
-        <th class="table_left">在庫総数</th>
-        <th class="table_left">店舗内在庫</th>
-        <th class="table_left">倉庫内在庫</th>
-        <th class="table_left">納品待ち</th>
-        <th class="table_left">発注閾値</th>
-    </tr>
-    <!-- <tr>
-        
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>        
-    </tr> -->
-    <?=$table?>
-</table>
+<h1>確認画面</h1>    
+<div class="table-wrapper"> 
+    <table style="margin: 0 auto">
+        <tr>
+            <th class="table_left">商品ID</th>
+            <th class="table_left">商品名</th>
+            <th class="table_left">在庫総数</th>
+            <th class="table_left">店舗内在庫</th>
+            <th class="table_left">倉庫内在庫</th>
+            <th class="table_left">納品待ち</th>
+            <th class="table_left">発注閾値</th>
+        </tr>
+        <!-- <tr>
+            
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>        
+        </tr> -->
+        <?=$table?>
+    </table>
+</div>
 
 <div class="btn-wrapper">
-    <button class="btn topBtn" onclick="location.href='06-6. register product lump exe.php'">商品を登録</button>
+    <button class="btn regBtn" onclick="location.href='06-6. register product lump exe.php'">商品を登録</button>
 </div>
 <div class="btn-wrapper">
     <button class="btn topBtn" onclick="location.href='index.html'">トップページへ戻る</button>

@@ -143,7 +143,7 @@
             </tr>
         </table>
         <?=$sent?>
-        <input type="submit" value="送信" id="submit">
+        <input type="submit" value="移動内容の確認" id="submit" class="btn regBtn">
     </form>
 </div>
 <div class="btn-wrapper">

@@ -73,7 +73,7 @@
         <?=$after?>
     </table>
 <div class="btn-wrapper">
-    <button onclick="location.href='09-4. delete exe.php'">削除</button>
+    <button onclick="location.href='09-4. delete exe.php'" class="btn delBtn">削除</button>
 </div>
 <div class="btn-wrapper">
     <button class="btn backBtn" onclick="location.href='javascript:history.back()'">前のページへ戻る</button><br>

@@ -121,7 +121,7 @@
         発注数：<input type="text" name="order" id="order"><br>
         担当者：<input type="text" name="order_person" id="order_person">
         <?=$productInfo?><br>
-        <input type="submit" value="送信" id="submit" style="margin-top:20px;">
+        <input type="submit" value="発注内容の確認" id="submit" class="btn regBtn">
     </form>
 </div>
 <div class="btn-wrapper">

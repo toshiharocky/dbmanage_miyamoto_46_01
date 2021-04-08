@@ -81,7 +81,7 @@ if ($status == false) {
                         <?=$delete_confirm?>
                     </table>
                     <div class="btn-wrapper">
-                        <input type="submit" value="削除" id="submit">
+                        <input type="submit" value="削除" id="submit" class="btn delBtn">
                     </div>
             </fieldset>
 </form>

@@ -122,7 +122,7 @@
                     </table>
                 <h2>修正内容</h2>
                     <?=$info?>
-                <input type="submit" value="送信" id="submit">
+                <input type="submit" value="更新内容確認" id="submit" class="btn regBtn">
             </fieldset>
         </div>
 </form>

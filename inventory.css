@@ -114,6 +114,14 @@ td{
     background-color: rgb(194, 227, 243);
 }
 
+.regBtn{
+    background-color: rgb(251, 225, 221);
+}
+
+.delBtn{
+    background-color: rgb(148, 147, 147);
+}
+
 .backBtn{
     background-color: rgb(251, 242, 239);
 }

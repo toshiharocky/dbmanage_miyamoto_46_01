@@ -52,7 +52,7 @@
     </table>
 </div>
 <div class="btn-wrapper">
-    <button  onclick="location.href='03-5. order insert.php'">送信</button><br>
+    <button  onclick="location.href='03-5. order insert.php'" class="btn regBtn">送信</button><br>
 </div>
 <div class="btn-wrapper">
     <button class="btn backBtn" onclick="location.href='javascript:history.back()'">前のページへ戻る</button><br>

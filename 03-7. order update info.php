@@ -87,7 +87,7 @@
                 <h2>修正内容</h2>
                     発注数：<input type="text" name="order" id="order"><br>
                     担当者：<input type="text" name="order_person" id="order_person"><br>
-                    <input type="submit" value="確認" id="submit">
+                    <input type="submit" value="確認" id="submit" class="btn regBtn">
             </fieldset>
 </form>
 <form action="03-10. order delete confirm.php" method="post">
